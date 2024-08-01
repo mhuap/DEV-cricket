@@ -4,6 +4,8 @@
   --color-cricket-red: #B52424;
   --color-nyc-blue: #003884;
   --color-nyc-blue-dark: #011F46;
+  --img-cricket-ball: url("https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  --img-cricket-player: url("https://images.unsplash.com/photo-1595210382266-2d0077c1f541?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 * {
@@ -12,13 +14,171 @@
   box-sizing: border-box;
 }
 
-h1, h2 {
-  font-family: "Staatliches", sans-serif;
+body {
+  background-color: var(--color-light-grey);
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-body {
-  background-color: var(--color-light-grey);
-  padding: 0 64px;
+h1, h2, #footer-h2 {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+}
+
+h1 {
+  font-size: 80px;
+  color: var(--color-offwhite);
+  margin-bottom: 16px;
+}
+
+h2, #footer-h2 {
+  font-size: 36px;
+}
+
+p, li {
+  color: var(--color-nyc-blue-dark);
+  font-size: 20px;
+}
+
+/* HEADER ---------- */
+header {
+  background-image: var(--img-cricket-ball);
+  background-size: cover;
+  background-position: center;
+  padding: 180px 64px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+h1, header p {
+  z-index: 4;
+}
+
+header p {
+  font-size: 24px;
+  max-width: 450px;
+  color: var(--color-offwhite);
+}
+
+.screen, #gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.screen {
+  background-color: var(--color-nyc-blue);
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#gradient {
+  background: rgb(1,31,70);
+  background: linear-gradient(90deg, rgba(1,31,70,0.8) 20%, rgba(0,56,132,0) 78%);
+  z-index: 2;
+}
+
+/* ABOUT */
+
+#about {
+  margin: 64px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#about h2 {
+  color: var(--color-nyc-blue);
+  margin-left: 64px;
+}
+
+#about p {
+  max-width: 800px;
+  margin-right: 64px;
+}
+
+/* SQUARES */
+
+#square-container {
+  display: flex;
+  color: var(--color-offwhite);
+}
+
+#square-container section {
+  padding: 64px;
+  flex: 1;
+}
+
+#square-container p {
+  color: var(--color-offwhite);
+  margin-top: 48px;
+}
+
+#join, #location {
+  background-color: var(--color-cricket-red);
+}
+
+#fees {
+  background-color: var(--color-nyc-blue);
+}
+
+/* SCHEDULE */
+
+#schedule-container {
+  display: flex;
+}
+
+#schedule-container > * {
+  /* flex: 1; */
+  width: 50%;
+}
+
+#img {
+  position: relative;
+  background-image: var(--img-cricket-player);
+  background-size: cover;
+  background-position: bottom left;
+}
+
+#schedule {
+  padding: 64px;
+}
+
+#schedule h2 {
+  color: var(--color-nyc-blue);
+  margin-bottom: 32px;
+}
+
+#schedule ul {
+  padding-left: 24px;
+  margin-top: 8px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--color-nyc-blue);
+  padding: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#footer-h2 {
+  margin-bottom: 32px;
+}
+
+footer p {
+  color: var(--color-offwhite);
+}
+
+footer > p:last-of-type {
+  max-width: 350px;
+  text-align: right;
 }
