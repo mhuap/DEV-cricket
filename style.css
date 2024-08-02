@@ -29,18 +29,18 @@ h1, h2, #footer-h2 {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 32px;
   color: var(--color-offwhite);
   margin-bottom: 16px;
 }
 
 h2, #footer-h2 {
-  font-size: 36px;
+  font-size: 24px;
 }
 
 p, li {
   color: var(--color-nyc-blue-dark);
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* HEADER ---------- */
@@ -48,7 +48,7 @@ header {
   background-image: var(--img-cricket-ball);
   background-size: cover;
   background-position: center;
-  padding: 180px 64px;
+  padding: 80px 32px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -59,8 +59,8 @@ h1, header p {
 }
 
 header p {
-  font-size: 24px;
-  max-width: 450px;
+  font-size: 16px;
+  max-width: 300px;
   color: var(--color-offwhite);
 }
 
@@ -88,36 +88,41 @@ header p {
 /* ABOUT */
 
 #about {
-  margin: 64px 0;
+  margin: 48px 0;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: autofit;
 }
 
 #about h2 {
   color: var(--color-nyc-blue);
-  margin-left: 64px;
+  margin-left: 32px;
+  margin-bottom: 32px;
 }
 
 #about p {
   max-width: 800px;
-  margin-right: 64px;
+  margin: 0 32px;
 }
 
 /* SQUARES */
 
 #square-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   color: var(--color-offwhite);
+  /* background-color: var(--color-cricket-red); */
 }
 
 #square-container section {
-  padding: 64px;
-  flex: 1;
+  padding: 32px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 #square-container p {
   color: var(--color-offwhite);
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 #join, #location {
@@ -132,11 +137,12 @@ header p {
 
 #schedule-container {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #schedule-container > * {
-  /* flex: 1; */
-  width: 50%;
+  width: 100%;
 }
 
 #img {
@@ -144,10 +150,11 @@ header p {
   background-image: var(--img-cricket-player);
   background-size: cover;
   background-position: bottom left;
+  min-height: 280px;
 }
 
 #schedule {
-  padding: 64px;
+  padding: 48px 32px;
 }
 
 #schedule h2 {
@@ -164,10 +171,12 @@ header p {
 
 footer {
   background-color: var(--color-nyc-blue);
-  padding: 64px;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 #footer-h2 {
@@ -179,6 +188,154 @@ footer p {
 }
 
 footer > p:last-of-type {
-  max-width: 350px;
-  text-align: right;
+  max-width: 280px;
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  header {
+    padding: 120px 32px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  #about {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #about h2 {
+    margin-bottom: 0;
+  }
+
+  #about p {
+    margin-right: 64px;
+  }
+
+  #square-container section {
+    padding: 48px 32px;
+    flex-basis: 50%;
+    /* flex: 1; */
+  }
+
+  #square-container p {
+    margin-top: 48px;
+  }
+
+  /* #location {
+    background-color: var(--color-nyc-blue);
+  } */
+
+  #schedule-container > * {
+    width: 50%;
+  }
+
+  #img {
+    min-height: 356px;
+  }
+
+  #schedule {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 900px){
+  h1 {
+    font-size: 80px;
+  }
+
+  h2, #footer-h2 {
+    font-size: 36px;
+  }
+
+  header {
+    padding: 180px 48px;
+  }
+
+  header p {
+    font-size: 20px;
+    width: 380px;
+  }
+
+  #about {
+    grid-template-columns: 1fr 2fr;
+    margin: 64px 0;
+  }
+
+  #about h2 {
+    margin-left: 48px;
+  }
+
+  #about p {
+    margin-right: 48px;
+  }
+
+  #square-container section {
+    padding: 48px;
+    flex: 1;
+  }
+
+  #square-container p {
+    margin-top: 48px;
+  }
+
+  #square-container p, #square-container h2 {
+    /* max-width: none; */
+  }
+
+  #img {
+    min-height: 353px;
+  }
+
+  #schedule {
+    padding: 48px;
+  }
+
+  #schedule h2 {
+    margin-bottom: 48px;
+  }
+
+  footer {
+    padding: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 180px 64px;
+  }
+
+  /* p, li {
+    font-size: 20px;
+  } */
+
+  #about {
+    margin: 64px 0;
+  }
+
+  #about h2 {
+    margin-left: 64px;
+  }
+
+  #about p {
+    margin-right: 64px;
+  }
+
+  #square-container section {
+    flex: 1;
+    padding: 64px;
+  }
+
+  #location {
+    background-color: var(--color-cricket-red);
+  }
+
+  #schedule {
+    padding: 64px;
+  }
+
+  footer {
+    padding: 64px;
+  }
 }
