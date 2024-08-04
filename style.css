@@ -29,7 +29,7 @@ h1, h2, #footer-h2 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   color: var(--color-offwhite);
   margin-bottom: 16px;
 }
@@ -81,7 +81,7 @@ header p {
 
 #gradient {
   background: rgb(1,31,70);
-  background: linear-gradient(90deg, rgba(1,31,70,0.8) 20%, rgba(0,56,132,0) 78%);
+  background: rgba(1,31,70, 0.7);
   z-index: 2;
 }
 
@@ -201,6 +201,10 @@ footer > p:last-of-type {
     font-size: 60px;
   }
 
+  #gradient {
+    background: linear-gradient(90deg, rgba(1,31,70,0.8) 20%, rgba(0,56,132,0) 100%);
+  }
+
   #about {
     grid-template-columns: 1fr 2fr;
   }
@@ -255,7 +259,7 @@ footer > p:last-of-type {
 
   header p {
     font-size: 20px;
-    width: 380px;
+    max-width: 380px;
   }
 
   #about {
