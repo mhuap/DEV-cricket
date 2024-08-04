@@ -111,7 +111,6 @@ header p {
   flex-wrap: wrap;
   justify-content: flex-end;
   color: var(--color-offwhite);
-  /* background-color: var(--color-cricket-red); */
 }
 
 #square-container section {
@@ -220,16 +219,11 @@ footer > p:last-of-type {
   #square-container section {
     padding: 48px 32px;
     flex-basis: 50%;
-    /* flex: 1; */
   }
 
   #square-container p {
     margin-top: 48px;
   }
-
-  /* #location {
-    background-color: var(--color-nyc-blue);
-  } */
 
   #schedule-container > * {
     width: 50%;
@@ -284,10 +278,6 @@ footer > p:last-of-type {
     margin-top: 48px;
   }
 
-  #square-container p, #square-container h2 {
-    /* max-width: none; */
-  }
-
   #img {
     min-height: 353px;
   }
@@ -309,10 +299,6 @@ footer > p:last-of-type {
   header {
     padding: 180px 64px;
   }
-
-  /* p, li {
-    font-size: 20px;
-  } */
 
   #about {
     margin: 64px 0;
